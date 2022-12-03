@@ -54,7 +54,7 @@ export const strokes = [
 
 const dates: string[] = [];
 for (const id in data) {
-    const item = data[id];
+    const item = data[id as keyof typeof data];
     const [month, date, serial] = id.split("-");
     dates.push(`${month}${date}`);
     graphData.nodes.push({
